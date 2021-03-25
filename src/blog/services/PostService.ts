@@ -14,7 +14,7 @@ export class PostService {
         return from(this.postRepository.find());
     }
     
-    public create(createPostDto: CreatePostDto){
+    public create(createPostDto: CreatePostDto): Promise<PostDto>{
        return this.postRepository.save(createPostDto);
     }
 }
