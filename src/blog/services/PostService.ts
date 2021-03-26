@@ -31,7 +31,7 @@ export class PostService {
 
 
     public delete(postId: number): void {
-        return this.postRepository.delete(postId);
+       this.postRepository.delete(postId);
      }
 
 }
