@@ -25,9 +25,9 @@ export class PostController {
     @Put()
     edit(@Body() editPostDto: EditPostDto): Promise<PostDto>{
        return this.postService.edit(editPostDto);
-    }
+    }  
 
-    @Delete()
+    @Delete(':id')
     delete(@Param() postId: number){
        this.postService.delete(postId);
     }
